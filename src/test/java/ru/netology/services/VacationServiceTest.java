@@ -7,13 +7,10 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 public class VacationServiceTest {
 
     @ParameterizedTest
-    @CsvFileSource(files ="src/test/resources/VacationTest.csv")
-    public void testVecationService(int expected, int income, int expenses, int threshold){
+    @CsvFileSource(files = "src/test/resources/VacationTest.csv")
+    public void testVecationService(int expected, int income, int expenses, int threshold) {
         VacationService service = new VacationService();
-
-        int actual = service.calculate(income,expenses,threshold);
-
-        Assertions.assertEquals(expected,actual);
+        int actual = service.calculate(income, expenses, threshold);
+        Assertions.assertEquals(expected, actual);
     }
-
 }
